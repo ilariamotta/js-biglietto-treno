@@ -21,7 +21,9 @@
 
     // * Prezzo del biglietto per km
     const kmBase = 0.21
-    const kmPrezzo = kmViaggio * kmBase;
+    const kmPrezzo = parseInt(kmViaggio) * kmBase;
+
+    console.log(kmPrezzo);
 
    
     // * sconto minorenni
