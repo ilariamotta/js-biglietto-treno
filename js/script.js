@@ -14,7 +14,7 @@
 // 1. RACCOLTA DATI
     //Numero km da percorrere ed età utente
 
-    const etaUtente = prompt("Inserisci la tua età");
+    const etaUtente = parseInt(prompt("Inserisci la tua età"), 10);
     const kmViaggio = prompt("Inserisci il numero di kilometri da percorrere");
 
 // 2. DATI PRESENTI
@@ -23,7 +23,7 @@
     const kmBase = 0.21
     const kmPrezzo = parseInt(kmViaggio) * kmBase;
 
-    console.log(kmPrezzo);
+    // console.log(kmPrezzo);
 
    
     // * sconto minorenni
@@ -36,6 +36,7 @@
     const prezzoOver = kmPrezzo - scontoOver;
     // console.log (prezzoOver);
     
+    let risultato = "";
     
 // 3. ESECUZIONE LOGICA
     // SE età utente minore o uguale 18 
@@ -46,4 +47,12 @@
         //stampare prezzo biglietto scontato
     // ALTRIMENTI non applicare nessuno sconto
         //stampare prezzo biglietto
+
+
+if (etaUtente <= 18) {
+    risultato = `Il prezzo del biglietto è di ${prezzoMin.toFixed(2)}€`
+}
+
+console.log (risultato);
+
 // 4. OUTPUT
