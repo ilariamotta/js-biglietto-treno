@@ -51,7 +51,9 @@
 
 if (etaUtente <= 18) {
     risultato = `Il prezzo del biglietto è di ${prezzoMin.toFixed(2)}€`
-}
+} else if (etaUtente >= 65) {
+    risultato = `Il prezzo del biglietto è di ${prezzoOver.toFixed(2)}€`
+} 
 
 console.log (risultato);
 
