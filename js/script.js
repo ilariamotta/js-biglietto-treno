@@ -13,8 +13,28 @@
 
 // 1. RACCOLTA DATI
     //Numero km da percorrere ed età utente
+
+    const etaUtente = prompt("Inserisci la tua età");
+    const kmViaggio = prompt("Inserisci il numero di kilometri da percorrere");
+
 // 2. DATI PRESENTI
-    //Prezzo del biglietto per km
+
+    // * Prezzo del biglietto per km
+    const kmBase = 0.21
+    const kmPrezzo = kmViaggio * kmBase;
+
+   
+    // * sconto minorenni
+    const scontoMin = (kmPrezzo * 20) / 100; 
+    const prezzoMin = kmPrezzo - scontoMin;
+    // console.log(prezzoMin);
+
+    // *sconto over65
+    const scontoOver = (kmPrezzo * 40) / 100;
+    const prezzoOver = kmPrezzo - scontoOver;
+    // console.log (prezzoOver);
+    
+    
 // 3. ESECUZIONE LOGICA
     // SE età utente minore o uguale 18 
         //applicare il 20% sconto sul prezzo del biglietto
